@@ -1,0 +1,192 @@
+/* 全局樣式 */
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #eeee90;
+    color: #0d1404;
+    padding: 10px;
+}
+
+/* 隱藏除了首頁連結以外的其他元素 */
+/* nav ul li:not(:first-child) {
+    display: none;
+} */
+
+nav ul li{
+    display: inline;
+}
+
+/* 控制 home-link 的樣式 */
+#home-link1 {
+    display: inline; /* 顯示首頁連結 */
+}
+#home-link2 {
+    display: inline; /* 顯示首頁連結 */
+}
+#home-link3 {
+    display: inline; /* 顯示首頁連結 */
+}
+
+#image-container1,
+#image-container2,
+#image-container3 {
+    display: none;
+    width: 200px; 
+    margin: 10px;  /* 隱藏所有的圖片容器 */
+}
+
+#backButton1 {
+    position: fixed;
+    bottom: 10px; /* 距離底部的距離 */
+    right: 10px; /* 距離右側的距離 */
+    top: 200px; /* 垂直位置 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, 50%); /* 將按鈕水平垂直居中 */
+    width: 100px; /* 按鈕寬度 */
+    height: 50px; /* 按鈕高度 */
+}
+#backButton2 {
+    display: none; /* 將按鈕初始化為隱藏狀態 */
+    position: relative; /* 使用相對位置 */
+    bottom: 0; /* 將按鈕置於其父元素的底部 */
+    left: 550px;
+    right: 10px; /* 距離右側的距離 */
+    width: 100px; /* 按鈕寬度 */
+    height: 50px; /* 按鈕高度 */
+    margin-top: auto; /* 自動調整垂直位置 */
+}
+
+/* 設定動畫 */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 圖片完全透明 */
+    }
+    to {
+        opacity: 1; /* 圖片完全可見 */
+    }
+}
+/* 指定動畫在image1上 */
+#image1 {
+    animation: fadeIn 1s ease-in-out; /* 使用 fadeIn 動畫，持續時間 1 秒，使用 ease-in-out 時間函數 */
+}
+
+
+
+#dialogBox {
+    max-width: 80%;
+    top: 100px; /* 將對話框定位在頁面的正上方 */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute; /* 將對話框設置為絕對定位 */
+}
+
+#dialogBox::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    transform: translateX(-50%) rotate(-45deg);
+    z-index: -1;
+}
+
+#dialogText {
+    font-size: 16px;
+    line-height: 1.5;
+    /* word-wrap: break-word; */
+     /* 讓文字換行 */
+    word-break: break-all;
+     /* 超過容器寬度時換行 */
+}
+
+#dialogBox2 {
+    display: none;
+    max-width: 80%;
+    top: 530px; /* 將對話框定位在頁面的正上方 */
+    left: 10px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute; /* 將對話框設置為絕對定位 */
+    white-space: pre-wrap; /* 讓內容保留換行符號並自動換行 */
+}
+
+#dialogBox2::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    transform: translateX(-50%) rotate(-45deg);
+    z-index: -1;
+}
+
+#dialogText2 {
+    display: block; /* 顯示文字 */
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: break-all; /* 超過容器寬度時換行 */
+}
+
+
+/* #image-container1 {
+    display: grid;
+    grid-template-columns: 3fr 7fr; 
+    
+    grid-gap: 10px;
+} */
+/* #grid-item {
+    display: grid;
+    grid-template-columns: 3fr 7fr; 
+    grid-gap: 10px; 
+} */
+    /* 這裡可以添加任何您希望對包含圖片和文字的項目進行的樣式設置 */
+
+
+/* .grid-item img {
+    width: 100%; 
+    height: auto; 
+} */
+/* 圖片寬度填滿格子 *//* 保持圖片比例 */
+/* #image-container {
+    display: flex;
+    
+    justify-content: space-between;
+    
+} */
+
+/* #image-container1 img {
+    width: 200px; 
+    margin: 10px; 
+} */
+
+/* #side-images {
+    display: flex;
+    flex-direction: column;
+} */
+
+
+/* 控制 image1 的樣式 */
+/* #image1 {
+    display: inline; 
+} */
+/* 控制 image2 和 image3 的樣式 */
+/* #image2,
+#image3 {
+    display: none; /* 隱藏其他圖片 */
+/* } */ 
